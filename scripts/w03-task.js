@@ -6,14 +6,13 @@ function add(number1, number2){
   return number1 + number2;
 }
 
-// Wasn't working in Chrome so removed # in the query selectors
 function addNumbers(){
-  const num1 = Number(document.querySelector("add1").value);
-  const num2 = Number(document.querySelector("add2").value);
-  document.querySelector("sum").value = add(num1, num2);
+  const num1 = Number(document.querySelector("#add1").value);
+  const num2 = Number(document.querySelector("#add2").value);
+  document.querySelector("#sum").value = add(num1, num2);
 }
 
-document.querySelector("addNumbers").addEventListener("click", addNumbers);
+document.querySelector("#addNumbers").addEventListener("click", addNumbers);
 
 /* Function Expression - Subtract Numbers */
 const subtract = function (number1, number2) {
