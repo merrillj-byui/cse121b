@@ -12,7 +12,7 @@ function addNumbers(){
   document.querySelector("sum").value = add(num1, num2);
 }
 
-document.querySelector("#addNumbers").addEventListener("click", addNumbers);
+document.querySelector("addNumbers").addEventListener("click", addNumbers);
 
 /* Function Expression - Subtract Numbers */
 const subtract = function (number1, number2) {
