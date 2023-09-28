@@ -52,21 +52,18 @@ document.querySelector('#divideNumbers').addEventListener('click', divideNumbers
 
 
 /* Decision Structure */
-// The instructions weren't super clear, so I added HTML at the end of <section1> that creates a heading, form element, 
+// The instructions weren't super clear, so I added HTML at the top of <section2> that creates a form element, 
 // and populates the form element with the year. Hope that is what you were looking for. The grammar in Step 7.1 is 
-// incomplete ('...a variable of [sp?] to store...'). Also, there is already an id=year in the footer.
+// incomplete ('...a variable of [sp?] to store...'). Also, there is already an id=year in the footer. Also, the
+// html contains other elements that we were probably supposed to do something with, but there aren't instructions.
 const currentDate = new Date();
 let currentYear = '';
 currentYear = currentDate.getFullYear();
-//document.querySelector('#year').value = currentYear;
-sectionElement = document.getElementById('section1');
-sectionElement.innerHTML += `
-    <article>
-    <h3>Year</h3>
-    <div>
-        <input type='text' id='year' name='year' value=${currentYear}>
-    </div>
-    </article>`;
+sectionHTML = `
+<label class="right">Year: 
+  <input type="text" id="year" value="${currentYear}" disabled>
+</label>` + document.querySelector('#section2').innerHTML;
+document.querySelector('#section2').innerHTML = sectionHTML;
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
