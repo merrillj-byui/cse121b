@@ -7,9 +7,9 @@ function add(number1, number2){
 }
 
 function addNumbers(){
-  const num1 = Number(document.querySelector("#add1").value);
-  const num2 = Number(document.querySelector("#add2").value);
-  document.querySelector("#sum").value = add(num1, num2);
+  const num1 = Number(document.querySelector("add1").value);
+  const num2 = Number(document.querySelector("add2").value);
+  document.querySelector("sum").value = add(num1, num2);
 }
 
 document.querySelector("#addNumbers").addEventListener("click", addNumbers);
