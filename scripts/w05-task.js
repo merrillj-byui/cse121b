@@ -55,7 +55,8 @@ const sortBy = (temples) => {
             displayTemples(templeList.filter((temple) => new Date(temple.dedicated) < new Date(1950, 0, 1)));
             break;
         case "atoz":
-            displayTemples(templeList.sort((a, b) => (a.templeName > b.templeName) ? 1 : -1));
+            let temples = templeList.map((temple) => temple);
+            displayTemples(temples.sort((a, b) => (a.templeName > b.templeName) ? 1 : -1));
             break;
         case "all":
             displayTemples(templeList);
