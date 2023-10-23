@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Project: Countries Flash Cards</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+          rel="stylesheet">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="project.css">
+        <script src="project.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                    <li><a id="toggleMenu">&equiv;</a></li>
+                    <li><a href="../index.html" class="active">Home</a></li>
+                    <li><a href="../w01-task.html">W1 Task</a></li>
+                    <li><a href="../w03-task.html">W3 Task</a></li>
+                    <li><a href="../w04-task.html">W4 Task</a></li>
+                    <li><a href="../w05-task.html">W5 Task</a></li>
+                    <li><a href="../project/">Project</a></li>
+                </ul>
+            </nav>        
+        </header>
+        <main>
+            <section class="edge">
+                <dd><h1>:: Country Card::</h1></dd>
+                    <dt id="name" class="field"></dt>
+                <dd>Region:</dd>
+                    <dt id="region" class="field"></dt>
+                <dd>Subregion:</dd>
+                    <dt id="subregion" class="field"></dt>
+                <dd>Capital:</dd>
+                    <dt id="capital" class="field"></dt>
+                <dd>Languages:</dd>
+                    <dt id="languages" class="field"></dt>
+                <section id="controls">
+                    <input type="button" id="unhide" value="Show Hidden">
+                    <input type="button" id="next" value="Next Random">
+                    <p>What to hide:</p>
+                    <select id="hide" title="Choose field to hide." multiple>
+                        <option value="none" selected>None</option>
+                        <option value="name">Country Name</option>
+                        <option value="abbr">Name Abbreviation</option>
+                        <option value="region">Region</option>
+                        <option value="subregion">Subregion</option>
+                        <option value="capital">Capital</option>
+                        <option value="languages">Languages</option>
+                    </select>
+                </section>
+            </section>           
+        </main>
+        <footer>
+            &copy;<span id="year">2023</span> | Joe Merrill | CSE 121b
+        </footer>
+        
+        <script src="../scripts/main.js"></script>    
+    </body>
+</html>

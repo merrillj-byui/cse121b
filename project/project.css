@@ -1,0 +1,56 @@
+input[type="button"] {
+    margin: .5rem;
+    background-color: lightgray;
+    color: black;
+    border: 2;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: min-content;
+    font: Arial;
+}
+
+input[type="button"]:disabled {
+    color: color-mix(in srgb, color 66%, color 66%);
+}
+
+
+dd {
+    margin: 0;
+    font-size: smaller;
+}
+
+dt::before {
+    content: "";
+}
+
+dt {
+    margin: 2rem;
+    font-size: 1em;
+}
+
+#name {
+    font-size: 2em;
+    width: max-content;
+}
+
+.edge {
+    width: min-content;
+    border: 2;
+    border-radius: 1em;
+    border-color: black;
+}
+
+.field {
+    background-color: white;
+    color: black;
+    border: 3;
+    border-style: solid;
+    border-color: black;
+    padding: .25em;
+}
+
+#controls {
+    display: block;
+    text-align: center;
+}
