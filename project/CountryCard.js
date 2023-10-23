@@ -52,38 +52,49 @@ const CountryCard = {
         // Based on the selected options (multiple select), hide the associated information
         var country = this.countries[this.index];
         const selectElement = document.querySelector("#hide");
+        var blanks = "_";
         // Get an array of the selected options
         const selected = Array.from(selectElement.selectedOptions).map(option => option.value);
         console.log("debug:", selected); // debugging
         // Hide the name, if that is selected
         if (selected.includes("name"))
         {
-            document.querySelector("#name").textContent = `${country.flag} (${country.cca2})`;
+            document.querySelector("#name").textContent = `${country.flag} 
+                                                           ${blanks.repeat(country.name.common.length)}
+                                                           (${country.cca2})`;
         }
         // Hide the abbreviation, if that is selected
         if (selected.includes("abbr"))
         {
-            document.querySelector("#name").textContent = `${country.flag} ${country.name.common} (  )`;
+            document.querySelector("#name").textContent = `${country.flag} 
+                                                           ${country.name.common} 
+                                                           (${blanks.repeat(country.cca2.length)})`;
         }
         // Hide the region, if that is selected
         if (selected.includes("region"))
         {
-            document.querySelector("#region").textContent = "";
+            document.querySelector("#region").textContent = blanks.repeat(country.region.length);
         }
         // Hide the subregion, if that is selected
         if (selected.includes("subregion"))
         {
-            document.querySelector("#subregion").textContent = "";
+            document.querySelector("#subregion").textContent = blanks.repeat(country.subregion.length);
         }
         // Hide the capital, if that is selected
         if (selected.includes("capital"))
         {
-            document.querySelector("#capital").textContent = "";
+            document.querySelector("#capital").textContent = blanks.repeat(country.capital[0].length);
         }
         // Hide the languages, if that is selected
         if (selected.includes("languages"))
         {
-            document.querySelector("#languages").innerHTML = "";
+            //document.querySelector("#languages").innerHTML = "";
+            let markup = "";
+            for (var language in country.languages){
+                markup += `• ${blanks.repeat(country.languages[language].length)}<br>`;
+                console.log("language:", language); // debugging
+            } 
+            document.querySelector("#languages").innerHTML = markup;
         }
    }
 }
